@@ -6,7 +6,6 @@ class Task2 extends Component {
     constructor(props){
         super(props)
         this.state = { value: "", bgcolor: ""}
-        //this.myRef = React.createRef(); 
       }
 
    
@@ -29,7 +28,6 @@ class Task2 extends Component {
    }
 
    validateHexcode = (value) => {
-    //var regExp = /^#[0-9A-F]{6}$/i;
     var regExp = /^[0-9A-F]{6}$/i;
     return regExp.test(value);
     }
