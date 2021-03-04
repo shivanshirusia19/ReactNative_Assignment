@@ -9,9 +9,8 @@ import {
   TextInput,
   TouchableOpacity,
   ImageBackground,
+  Image
 } from 'react-native';
-
-//const image = { uri: "https://reactjs.org/logo-og.png" };
 
 
 class Task1 extends Component{
@@ -31,7 +30,12 @@ class Task1 extends Component{
 
     return(
 
-      //<ImageBackground source={image} style={styles.image}>
+  <ImageBackground
+        style={styles.image}
+        source={{
+          uri:
+            'https://www.toptal.com/designers/subtlepatterns/patterns/moroccan-flower-dark.png',
+        }}>
 
       <View style={styles.container}>
         
@@ -95,7 +99,7 @@ class Task1 extends Component{
 
      
       </View>
-      //</ImageBackground>
+      </ImageBackground>
     )
   }
 
@@ -104,11 +108,9 @@ class Task1 extends Component{
 }
 
 const styles = StyleSheet.create({
-  // image: {
-  //   flex: 1,
-  //   resizeMode: "cover",
-  //   justifyContent: "center"
-  // },
+  image: {
+    flex: 1,
+  },
   container: {
     flex: 1,
   },
