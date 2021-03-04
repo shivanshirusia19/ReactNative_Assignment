@@ -30,4 +30,4 @@
   3). Create a image view and show activity indicator in place of image while it
      is loaded.
      
-       ![](Screenshots/t3.1.png)
+   ![](Screenshots/t3.1.png)
