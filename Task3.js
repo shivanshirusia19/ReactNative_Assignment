@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image, ActivityIndicator } from 'react-native';
 
-//const image = { uri: "https://reactjs.org/logo-og.png" };
-
 export default class Task3 extends Component {
   render() {
 
