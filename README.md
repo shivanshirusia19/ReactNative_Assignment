@@ -3,9 +3,9 @@
 
 1) Update the code structure 
 
-    Created src folder
-    Created assets and components in src folder
-    Move all the js files in the components folder
+    Created src folder.
+    Created assets and components in src folder.
+    Moved all the js files in the components folder.
     
 
 2) Create a new Screen 
