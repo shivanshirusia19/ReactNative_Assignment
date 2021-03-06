@@ -19,6 +19,12 @@ Method : GET
 
 Use fetch https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+
+
+Refer src->components->ApiCall.js file for the code
+
+
+
 ![](Screenshots/ApiCall1.png)
 
 ![](Screenshots/ApiCall2.png)
