@@ -1,23 +1,23 @@
-// import React from 'react';
-// import { StyleSheet,  View, Text } from 'react-native';
-// import { createStackNavigator } from '@react-navigation/stack';
-// import HomeScreen from './HomeScreen';
+import React from 'react';
+import { StyleSheet,  View, Text } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './HomeScreen';
 
-// const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
-// function Screen1(){
+function Screen1(){
 
-//     return(
-//         <Stack.Navigator>
-//             <Stack.Screen
-//             name='HomeScreen'
-//             component={HomeScreen}
-//             options={ {
-//                 title: 'MEN CLOTHING'
-//             } }
-//             />
-//         </Stack.Navigator>
-//     );
-// }
+    return(
+        <Stack.Navigator>
+            <Stack.Screen
+            name='HomeScreen'
+            component={HomeScreen}
+            options={ {
+                title: 'MEN CLOTHING'
+            } }
+            />
+        </Stack.Navigator>
+    );
+}
 
-// export default Screen1;
+export default Screen1;
