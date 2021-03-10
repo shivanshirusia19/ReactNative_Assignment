@@ -14,8 +14,8 @@ Create the above screen in React-Native
 
 Refer src -> components -> design.js for the code
 
-![](src/assets/screenshots/SS1.png)
+![](src/assets/Screenshots/SS1.png)
 
-![](src/assets/screenshots/SS1.png)
+![](src/assets/Screenshots/SS1.png)
 
 
