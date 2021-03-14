@@ -14,5 +14,5 @@ Refer src -> components -> SectionlistStack.js for the code of Assignment-1
 
 Refer src -> components -> Modalgif.js for the code of Assignment-2
 
-![](src/assets/Screenshots/Modalgif1.png)
-![](src/assets/Screenshots/Modalgif2.png)
+![](src/assets/Screenshots/ModalAssgn1.png)
+![](src/assets/Screenshots/ModalAssgn2.png)
