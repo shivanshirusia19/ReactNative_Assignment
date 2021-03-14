@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
-  TextInput,
   View,
   SectionList,
   //Button,
@@ -12,6 +11,7 @@ import {
 import CheckBox from '@react-native-community/checkbox';
 //import Icon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
+import {SearchBar} from 'react-native-elements';
 
 const DATA = require('./DataJson.json');
 
@@ -20,9 +20,15 @@ export default class Sectionlist extends Component {
     super(props);
     this.state = {
       value: false,
-      // onChangeText: '',
+    };
+    this.state = {
+      search: '',
     };
   }
+
+  updateSearch = search => {
+    this.setState({search});
+  };
 
   Item = title => {
     return (
@@ -63,7 +69,16 @@ export default class Sectionlist extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          <TextInput style={styles.textInput} />
+          <SearchBar
+            placeholder=""
+            onChangeText={this.updateSearch}
+            value={this.state.search}
+            round={true}
+            searchIcon={{size: 30, color: 'white'}}
+            placeholderTextColor="black"
+            lightTheme={true}
+            containerStyle={styles.searchBar}
+          />
         </LinearGradient>
         <SectionList
           sections={DATA}
@@ -128,13 +143,14 @@ const styles = StyleSheet.create({
     //marginTop: 40,
     marginLeft: 80,
   },
-  textInput: {
-    backgroundColor: 'lightgrey',
-    borderRadius: 10,
-    height: 40,
-    width: '100%',
-    paddingBottom: 5,
-    marginBottom: 3,
+  searchBar: {
+    backgroundColor: 'transparent',
+    borderBottomColor: 'transparent',
+    borderTopColor: 'transparent',
+    height: 30,
+    marginBottom: 10,
+    paddingBottom: 10,
+    justifyContent: 'center',
   },
   item: {
     flex: 2,

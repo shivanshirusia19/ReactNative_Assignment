@@ -12,6 +12,10 @@ target 'ModalAssgn' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'ModalAssgnTests' do
     inherit! :complete
     # Pods for testing
