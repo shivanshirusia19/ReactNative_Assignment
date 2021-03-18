@@ -6,7 +6,7 @@ https://drive.google.com/file/d/1Lb53IDtVZg49MsaY1ZEX_HBJWBLhfHmD/view?usp=shari
 
 Refer src -> components -> DraggableBall.js for the code
 
-![]('https://github.com/shivanshirusia19/ReactNative_Assignment/blob/Components6/src/assets/DraggableBall.gif')
+![](https://github.com/shivanshirusia19/ReactNative_Assignment/blob/Components6/src/assets/DraggableBall.gif)
 
 Create a map view
 1.  Show your current location 
@@ -15,4 +15,4 @@ Create a map view
 
 Refer src -> components -> MapsView2.js for the code
 
-![]('https://github.com/shivanshirusia19/ReactNative_Assignment/blob/Components6/src/assets/Map.gif')
+![](https://github.com/shivanshirusia19/ReactNative_Assignment/blob/Components6/src/assets/Map.gif)
