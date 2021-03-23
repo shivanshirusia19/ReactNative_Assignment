@@ -29,12 +29,17 @@ export default class SignInScreen extends Component {
             onChangeText={(email) => this.setState({email})}
             placeholder="Your Email Address"
           />
-          <TextInput
-            style={styles.textInput}
-            value={this.state.password}
-            onChangeText={(password) => this.setState({password})}
-            placeholder="Password"
-          />
+          <View style={styles.textInputView}>
+            <TextInput
+              style={styles.passwordTextInput}
+              value={this.state.password}
+              onChangeText={(password) => this.setState({password})}
+              placeholder="Password"
+            />
+            <TouchableOpacity>
+              <Text style={styles.showText}>Show</Text>
+            </TouchableOpacity>
+          </View>
           <TouchableOpacity>
             <Text style={styles.forgotText}>Forgot Password?</Text>
           </TouchableOpacity>
@@ -86,6 +91,29 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'darkgrey',
     margin: 10,
+  },
+  textInputView: {
+    height: 60,
+    width: '90%',
+    paddingLeft: 20,
+    borderWidth: 1,
+    borderColor: 'darkgrey',
+    margin: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  passwordTextInput: {
+    height: 60,
+    width: '80%',
+    fontSize: 16,
+    color: 'darkgrey',
+  },
+  showText: {
+    alignSelf: 'center',
+    fontSize: 16,
+    fontWeight: '500',
+    paddingRight: 20,
   },
   forgotText: {
     fontSize: 17,
