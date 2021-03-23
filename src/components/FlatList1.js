@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 const DATA = [
   {
     id: '1',

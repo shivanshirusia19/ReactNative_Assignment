@@ -64,6 +64,9 @@ export default class AccountScreen extends Component {
         <ScrollView>
           <FlatList1 />
           <FlatList2 />
+          <View style={styles.footerView}>
+            <Text style={styles.footerText}>App Version4.0.6(1)</Text>
+          </View>
         </ScrollView>
       </>
     );
@@ -111,5 +114,15 @@ const styles = StyleSheet.create({
   },
   touchable: {
     flexDirection: 'row',
+  },
+  footerView: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 60,
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
+  },
+  footerText: {
+    color: 'grey',
   },
 });

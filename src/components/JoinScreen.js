@@ -47,14 +47,18 @@ export default class JoinScreen extends Component {
             onChangeText={(email) => this.setState({email})}
             placeholder="Your Email"
           />
-          <TextInput
-            style={styles.textInput}
-            value={this.state.password}
-            onChangeText={(password) => this.setState({password})}
-            placeholder="Password"
-          />
           <View style={styles.textInputView}>
-            {/* <Image /> */}
+            <TextInput
+              style={styles.passwordTextInput}
+              value={this.state.password}
+              onChangeText={(password) => this.setState({password})}
+              placeholder="Password"
+            />
+            <TouchableOpacity>
+              <Text style={styles.showText}>Show</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.textInputView}>
             <Image
               source={{
                 uri:
@@ -79,7 +83,7 @@ export default class JoinScreen extends Component {
               boxType="circle"
               style={styles.checkbox}
               onFillColor="gold"
-              onCheckColor="white"
+              onCheckColor="black"
               onTintColor="gold"
               onValueChange={(value) => {
                 this.setState({value: value});
@@ -93,7 +97,7 @@ export default class JoinScreen extends Component {
               boxType="circle"
               style={styles.checkbox}
               onFillColor="gold"
-              onCheckColor="white"
+              onCheckColor="black"
               onTintColor="gold"
               onValueChange={(value) => {
                 this.setState({value: value});
@@ -168,6 +172,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     margin: 10,
   },
+  passwordTextInput: {
+    height: 60,
+    width: '80%',
+    fontSize: 16,
+    color: 'darkgrey',
+  },
+  showText: {
+    alignSelf: 'center',
+    fontSize: 16,
+    fontWeight: '500',
+    paddingRight: 20,
+  },
   textInputView: {
     height: 60,
     width: '90%',
@@ -212,7 +228,6 @@ const styles = StyleSheet.create({
   checkbox2: {
     height: 24,
     width: 24,
-    backgroundColor: 'gold',
     borderColor: 'gold',
   },
   checkBoxText2: {
