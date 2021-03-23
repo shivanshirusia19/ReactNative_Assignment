@@ -38,11 +38,11 @@ export default class AccountScreen extends Component {
           <View style={styles.leftContainer}>
             <Text style={styles.welcomeText}>Welcome!</Text>
             <View style={styles.leftContainerOptions}>
-              <TouchableOpacity onPress={this.onPressEvent}>
+              <TouchableOpacity
+                style={styles.touchable}
+                onPress={this.onPressEvent}>
                 <Text style={styles.optionsText}> SIGN IN</Text>
-              </TouchableOpacity>
-              <Text style={styles.optionsText}>|</Text>
-              <TouchableOpacity onPress={this.onPressEvent}>
+                <Text style={styles.optionsText}>|</Text>
                 <Text style={styles.optionsText}>JOIN </Text>
               </TouchableOpacity>
             </View>
@@ -108,5 +108,8 @@ const styles = StyleSheet.create({
     height: 60,
     width: 60,
     tintColor: '#daa520',
+  },
+  touchable: {
+    flexDirection: 'row',
   },
 });
