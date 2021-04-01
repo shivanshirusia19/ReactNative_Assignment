@@ -5,7 +5,6 @@
     "desc":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "time": {
-      "days": "0",
       "hours": "0",
       "minutes" : "0",
       "seconds": "8"
@@ -17,7 +16,6 @@
     "desc":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "time": {
-      "days": "0",
       "hours": "0",
       "minutes" : "1",
       "seconds": "0"
@@ -29,7 +27,6 @@
     "desc":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "time": {
-      "days": "0",
       "hours": "0",
       "minutes" : "2",
       "seconds": "0"

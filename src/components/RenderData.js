@@ -6,7 +6,6 @@ export default class RenderData extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      days: 0,
       hours: 0,
       minutes: 0,
       seconds: 0,
@@ -28,7 +27,6 @@ export default class RenderData extends Component {
       } else {
         countdown = countdown.subtract(1, 's');
         this.setState({
-          days: countdown.days(),
           hours: countdown.hours(),
           minutes: countdown.minutes(),
           seconds: countdown.seconds(),
@@ -52,8 +50,7 @@ export default class RenderData extends Component {
         </View>
         <View style={styles.rightPart}>
           <Text style={styles.timer}>
-            {this.state.days} : {this.state.hours} : {this.state.minutes} :{' '}
-            {this.state.seconds}
+            {this.state.hours} : {this.state.minutes} : {this.state.seconds}
           </Text>
         </View>
       </View>
@@ -109,7 +106,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   timer: {
-    fontSize: 14,
+    fontSize: 18,
     color: 'white',
   },
 });
