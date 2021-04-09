@@ -12,7 +12,7 @@ export default function BottomNavig() {
     <NavigationContainer>
       <Tab.Navigator
         tabBarOptions={{
-          activeTintColor: 'green',
+          activeTintColor: 'red',
           inactiveTintColor: 'white',
           labelStyle: {fontSize: 16},
           style: {
