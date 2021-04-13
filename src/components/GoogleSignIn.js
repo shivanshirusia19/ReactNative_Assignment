@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Alert, Image} from 'react-native';
+import {View, Text, StyleSheet, Alert, Image, Button} from 'react-native';
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -10,7 +10,7 @@ class GoogleSignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: '',
+      userInfo: [],
       isLoggedIn: false,
       error: '',
     };
@@ -70,6 +70,19 @@ class GoogleSignIn extends Component {
     }
   };
 
+  signOut = async () => {
+    try {
+      await GoogleSignin.revokeAccess();
+      await GoogleSignin.signOut();
+      this.setState({
+        userInfo: null,
+        isLoggedIn: false,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   render() {
     //const {isLoggedIn, userInfo} = this.state;
     return (
@@ -81,16 +94,15 @@ class GoogleSignIn extends Component {
           color={GoogleSigninButton.Color.Dark}
           onPress={this.signIn}
         />
-        <View style={styles.status}>
-          {this.state.isLoggedIn === false ? (
-            <Text style={styles.loggedinMessage}> You must sign in!</Text>
-          ) : null}
-        </View>
+
         <View style={styles.userInfoContainer}>
           {this.state.isLoggedIn === true ? (
             <>
               <Text style={styles.displayTitle}>
                 Welcome {this.state.userInfo.user.name}
+              </Text>
+              <Text style={styles.displayTitle}>
+                Email : {this.state.userInfo.user.email}
               </Text>
               <View style={styles.profileImageContainer}>
                 <Image
@@ -103,8 +115,11 @@ class GoogleSignIn extends Component {
                   }}
                 />
               </View>
+              <Button title="Sign Out" onPress={this.signOut} />
             </>
-          ) : null}
+          ) : (
+            <Text style={styles.loggedinMessage}> You must sign in!</Text>
+          )}
         </View>
       </View>
     );
